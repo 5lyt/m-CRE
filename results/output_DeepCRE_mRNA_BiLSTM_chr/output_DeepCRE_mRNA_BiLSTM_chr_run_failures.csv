@@ -1,0 +1,22 @@
+﻿species,task,error,traceback
+Atha,,"KeyError(""在 validation_genes.pickle 中未找到物种 Atha 对应的验证白名单键。可尝试的别名=['Atha', 'atha', 'arabidopsis', 'Arabidopsis', 'arabidopsis_thaliana', 'Arabidopsis_thaliana', 'ath']；pickle 顶层键示例=['ara', 'zea', 'sol', 'sor']"")","Traceback (most recent call last):
+  File ""/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr.py"", line 1087, in main
+    validation_gene_set, validation_pickle_path, validation_pickle_key = load_validation_gene_whitelist(species_key)
+  File ""/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr.py"", line 432, in load_validation_gene_whitelist
+    raise KeyError(
+KeyError: ""在 validation_genes.pickle 中未找到物种 Atha 对应的验证白名单键。可尝试的别名=['Atha', 'atha', 'arabidopsis', 'Arabidopsis', 'arabidopsis_thaliana', 'Arabidopsis_thaliana', 'ath']；pickle 顶层键示例=['ara', 'zea', 'sol', 'sor']""
+"
+Sbic,,"KeyError(""在 validation_genes.pickle 中未找到物种 Sbic 对应的验证白名单键。可尝试的别名=['Sbic', 'sbic', 'sorghum', 'Sorghum', 'sorghum_bicolor', 'Sorghum_bicolor', 'sbi']；pickle 顶层键示例=['ara', 'zea', 'sol', 'sor']"")","Traceback (most recent call last):
+  File ""/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr.py"", line 1087, in main
+    validation_gene_set, validation_pickle_path, validation_pickle_key = load_validation_gene_whitelist(species_key)
+  File ""/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr.py"", line 432, in load_validation_gene_whitelist
+    raise KeyError(
+KeyError: ""在 validation_genes.pickle 中未找到物种 Sbic 对应的验证白名单键。可尝试的别名=['Sbic', 'sbic', 'sorghum', 'Sorghum', 'sorghum_bicolor', 'Sorghum_bicolor', 'sbi']；pickle 顶层键示例=['ara', 'zea', 'sol', 'sor']""
+"
+Slyc,,"KeyError(""在 validation_genes.pickle 中未找到物种 Slyc 对应的验证白名单键。可尝试的别名=['Slyc', 'slyc', 'tomato', 'Tomato', 'solanum', 'Solanum', 'solanum_lycopersicum', 'Solanum_lycopersicum', 'sly']；pickle 顶层键示例=['ara', 'zea', 'sol', 'sor']"")","Traceback (most recent call last):
+  File ""/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr.py"", line 1087, in main
+    validation_gene_set, validation_pickle_path, validation_pickle_key = load_validation_gene_whitelist(species_key)
+  File ""/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr.py"", line 432, in load_validation_gene_whitelist
+    raise KeyError(
+KeyError: ""在 validation_genes.pickle 中未找到物种 Slyc 对应的验证白名单键。可尝试的别名=['Slyc', 'slyc', 'tomato', 'Tomato', 'solanum', 'Solanum', 'solanum_lycopersicum', 'Solanum_lycopersicum', 'sly']；pickle 顶层键示例=['ara', 'zea', 'sol', 'sor']""
+"

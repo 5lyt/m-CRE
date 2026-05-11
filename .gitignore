@@ -1,0 +1,65 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+
+# Conda or virtual environments
+conda_env/
+env/
+venv/
+.venv/
+m-CRE/
+*.egg-info/
+
+# Raw genome and annotation files
+data/raw/
+data/intermediate/
+*.fa
+*.fasta
+*.fna
+*.fastq
+*.fq
+*.fastq.gz
+*.fq.gz
+*.sra
+*.sam
+*.bam
+*.bai
+*.gff
+*.gff3
+*.gtf
+
+# Model checkpoints and weights
+models/
+checkpoints/
+*.h5
+*.hdf5
+*.keras
+*.ckpt*
+*.pb
+
+# Large temporary outputs
+outputs/
+large_results/
+tmp/
+temp/
+
+# Optional: large cross-species prediction files
+cross_species_predictions.csv.gz
+cross_species_roc_points_aggregated.csv
