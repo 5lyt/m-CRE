@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/5lyt/m-CRE",
+  "base_commit": "e5a6b45f3967b00da926af471a32b56c87e85a2f",
+  "existing_release": "v1.0.0",
+  "proposed_next_release": "v1.1.0",
+  "release_published_by_this_work": false,
+  "license": "Academic Research License; original LICENSE preserved"
+}

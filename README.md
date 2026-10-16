@@ -1,44 +1,48 @@
 # m-CRE
 
-m-CRE is a deep learning framework for high/low plant gene expression classification by integrating regulatory sequence information and mRNA half-life-related features. The framework combines TSS- and TTS-flanking sequence inputs with transcript-structure-derived features and supports ablation analysis, chromosome-wise validation, and DeepSHAP-based model interpretation.
+m-CRE classifies plant genes as relatively high or low expressed within a species and tissue, using paired gene-boundary DNA windows and eight transcript structural/compositional features. This source package consolidates the original public repository and the Scientific Reports revision. The package contains the complete repository source tree, revised analysis entry points and supplied processed inputs.
 
-## Overview
+The public baseline is https://github.com/5lyt/m-CRE, release v1.0.0, with the cited Zenodo archive https://doi.org/10.5281/zenodo.20505253. This prepared revision has not itself been pushed or published. Proposed next version: v1.1.0, subject to checking that the tag is still unused. The existing Academic Research License is preserved unchanged in LICENSE.
 
-This repository contains the source code used for:
+## Start with the supplied evidence
 
-- extracting TSS- and TTS-flanking regulatory sequences;
-- calculating mRNA half-life-related features;
-- constructing high/low gene expression labels;
-- training sequence-only, feature-only, and fused deep learning models;
-- performing chromosome-wise validation;
-- conducting DeepSHAP-based interpretability analysis;
-- generating partial figures and result summaries for publication.
+Install the lightweight audit dependencies and run from the repository root:
 
-## Species and tissues
+```bash
+python -m pip install -r requirements-audit.txt
+python analysis/verify_revision.py --output verified_core.json
+python analysis/verify_new_materials.py --output-dir verified_new
+python code/motifs/export_patterns_meme.py --h5 data/motifs/tfmodisco_results_1362.h5 --output outputs/patterns.meme
+```
 
-The model was evaluated on leaf and root datasets from four representative plant species:
+These steps need no GPU or model retraining. They inspect supplied numbers and the pattern object. They do not regenerate historical model predictions. For full interval-to-array checks, restore the two already supplied motif array assets and add `--array-dir PATH` to verify_new_materials.py. Model and array assets are listed in docs/DATA.md; they are separate from the ordinary git history.
 
-- *Arabidopsis thaliana*;
-- *Solanum lycopersicum*;
-- *Sorghum bicolor*;
-- *Zea mays*.
+## What is supplied
 
-## Repository structure
+| Component | Location and verified scope |
+| --- | --- |
+| Original M1–M4 source and plotting programs | code/; original bytes retained under provenance/original_code/ |
+| Updated M4 trainer and strict attribution export | code/model/DeepCRE_mRNA_BiLSTM_chr.py and code/interpretation/attribute_expected_gradients.py |
+| Four complete numerical eight-feature tables | data/processed/; 27,652 Atha, 34,081 Sbic, 34,413 Slyc and 39,745 Zmay genes |
+| Candidate lists and model metrics | data/candidates/, data/model_metrics/, results/revised/ |
+| TF-MoDISco result object | data/motifs/tfmodisco_results_1362.h5; 13 positive and 15 negative patterns |
+| Motif pipeline | code/motifs/; saved-input runner, MEME export and explicit TOMTOM rerun |
+| WGCNA expression objects and corrected exports | R/ and results/revised/WGCNA/ |
+| WGCNA/enrichment replay or rerun | R/reproduce_network_from_saved_expression.R and R/enrichment_from_saved_mapping.R |
+| All ten model comparison entry points | code/model/train_comparisons.py with prepared inputs and matched controls |
+| Ten-model comparison results (Figure 2a/d) | data/model_metrics/ten_model_controls/; M0-M4 plus M4-T8/M4-R8/M4-P/T8-only/R8-only |
+| Source/sample metadata | provenance/ and data/metadata/ |
 
-```text
-m-CRE/
-├── code/
-│   ├── data_deal/          # Data preprocessing scripts
-│   ├── model/              # Model training and validation scripts
-│   └── interpretation/     # DeepSHAP and visualization scripts
-│
-├── data/
-│   ├── example/            # Representative processed example data
-│   └── metadata/           # Metadata files, accession lists, and validation information
-│
-├── results/                # Selected result tables and figures
-├── R/                      # WGCNA-related scripts and auxiliary analyses
-├── README.md
-├── requirements.txt
-├── .gitignore
-└── LICENSE
+## Definitions shared with the manuscript
+
+- The candidate manifest requests 1,362 genes; the actual input contains 1,357 aligned sequence/signed-score rows. Legacy filenames ending in 1362 retain their historical names.
+- Candidate inference predicts 1,182 high and 175 low genes. Only 165 inputs overlap the original maize-leaf M4 OOF export, of which 142 were originally predicted high. These are separate denominators and inference records.
+- Global attribution uses `shap.GradientExplainer`, or expected gradients. The old exporter labeled ACGT channels as ATCG. The corrected exporter and Figure 3 use ACGT.
+- The HDF5 stores 2,576 retained seqlets from 348 genes, concentrated on chromosomes 1–3. It is distinct from the 1,357-gene input cohort. All stored intervals match the supplied sequence/signed-score arrays.
+- Figure 2a/b/d/e reports chromosome-fold values/means. Figure 2c/f pools concatenated source-model prediction records; target genes recur across source models. The cross-species scaler reconstruction is distinct from restoring the original training scaler.
+- The ten-model Figure 2a/d AUROC values are supplied in data/model_metrics/ten_model_controls/ as mean_fold_auroc +/- fold_std, where fold_std is the sample standard deviation across chromosome folds. These historical numbers were generated by the reviewer-response control pipeline DeepCRE_review_controls_v3; the portable rerun entry point in this repository is code/model/train_comparisons.py together with code/data_deal/build_control_features.py.
+- The supplied common feature columns are already preprocessed. The model additionally fits fold scaling on balanced training genes. The maize raw extractor writes transcript rows despite calculating a gene aggregate. Rebuilt raw outputs must not silently replace the supplied common inputs.
+
+## Reproduction and new runs
+
+Use [Reproduction instructions](docs/REPRODUCIBILITY.md) for exact commands and required external inputs, [Data inventory](docs/DATA.md) for assets and provenance, and [Upload guide](docs/UPLOAD_zh.md) for GitHub and Zenodo update steps. Existing figures and validated summaries were reused in this revision. Newly added portable training, control, R and motif rerun programs are supplied for reproducible future execution; they have not been used here to retrain historical models or recreate the full historical discovery run. Missing original scalers, signed auxiliary-feature outputs, family-wise prediction records and exact historical TOMTOM/database logs are identified once in docs/REPRODUCIBILITY.md.

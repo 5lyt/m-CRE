@@ -1,0 +1,11 @@
+﻿task,species,tissue,fold,val_chromosome,n_background,n_explained,n_val_total,n_val_used,n_val_pos_used,n_val_neg_used,only_correct_predictions,model_path
+Zmay_root,Zmay,root,1,1,64,256,385,256,131,125,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Zmay_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr1.keras
+Zmay_root,Zmay,root,2,2,64,256,295,256,107,149,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Zmay_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr2.keras
+Zmay_root,Zmay,root,3,3,64,233,233,233,123,110,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Zmay_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr3.keras
+Zmay_root,Zmay,root,4,4,64,243,243,243,99,144,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Zmay_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr4.keras
+Zmay_root,Zmay,root,5,5,64,256,287,256,135,121,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Zmay_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr5.keras
+Zmay_root,Zmay,root,6,6,64,179,179,179,82,97,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Zmay_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr6.keras
+Zmay_root,Zmay,root,7,7,64,203,203,203,101,102,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Zmay_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr7.keras
+Zmay_root,Zmay,root,8,8,64,199,199,199,79,120,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Zmay_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr8.keras
+Zmay_root,Zmay,root,9,9,64,143,143,143,64,79,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Zmay_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr9.keras
+Zmay_root,Zmay,root,10,10,64,139,139,139,63,76,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Zmay_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr10.keras

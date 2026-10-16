@@ -1,0 +1,92 @@
+[
+  {
+    "filename": "Atha_mRNA_features_common.csv",
+    "bytes": 4644258,
+    "sha256": "c4ac3e9b1ce36379781b88d2974382e8fc9ae8d8ba6291e4272152c8da89b7e7"
+  },
+  {
+    "filename": "DeepCRE_mRNA_BiLSTM_chr.py",
+    "bytes": 42929,
+    "sha256": "f53cc0b926a999e9f42eb59e2d97b17844c0eecd5a5220a1201bf3e497e8f7fe"
+  },
+  {
+    "filename": "DeepCRE_mRNA_BiLSTM_chr_DeepSHAP.py",
+    "bytes": 43758,
+    "sha256": "04a74681a63e935d3fb30a37a64281fb77eed6d1ca9d887b2fb743604ee5291e"
+  },
+  {
+    "filename": "M4_jieguo.zip",
+    "bytes": 60468667,
+    "sha256": "4352a06cf12a7c470560afb0a6e3f1b3fd0d882f32ee7175e413e4ecf55396ae"
+  },
+  {
+    "filename": "Response_to_Reviewers_final.docx",
+    "bytes": 680130,
+    "sha256": "cb7d09ffa74be1c9bb2295172928e88b86fcd083e46a5818082e3d439d29fa08"
+  },
+  {
+    "filename": "Sbic_mRNA_features_common.csv",
+    "bytes": 6030837,
+    "sha256": "558400184584cbb7bd7fa0a10d6ab0552888b0ca503d4dc705821989e2477a5c"
+  },
+  {
+    "filename": "Scientific_Reports - 副本.zip",
+    "bytes": 33725060,
+    "sha256": "fafd666aa871ef366398de51685c668139fbf11142ddc30a6b624a3a87f05783"
+  },
+  {
+    "filename": "Slyc_mRNA_features_common.csv",
+    "bytes": 4039815,
+    "sha256": "40d5da124a9c9f181698e35e5d6e8d758c7338a3471d08dd585d254be9c05a94"
+  },
+  {
+    "filename": "Zmay_WGCNA1362_tfmodisco_pipeline.zip",
+    "bytes": 108927,
+    "sha256": "2ce37ee885d1047224d786fa8bfbef773411da50d246ec07d4363f7401055801"
+  },
+  {
+    "filename": "Zmay_WGCNA_supported_high_expression_candidate_genes_1362_info.csv",
+    "bytes": 279855,
+    "sha256": "51ef4d82dc5fb2b78de5919eeea9dd6bfa14ed49a59a39ea806290a5ec197fe2"
+  },
+  {
+    "filename": "Zmay_get_halflife.py",
+    "bytes": 5318,
+    "sha256": "f356853b6965c7f1c19b0ab7b54d5d803882a51c524ebb0d8bc8b08cf79600da"
+  },
+  {
+    "filename": "Zmay_mRNA_features_common.csv",
+    "bytes": 4634760,
+    "sha256": "eb45ccafd9bc27c35f2d744fafb73e3e4ff2d537a23070958d8eeb50c475fed6"
+  },
+  {
+    "filename": "gene_meta_1362_used.csv",
+    "bytes": 622425,
+    "sha256": "93c1f49baed66a64e02b58f8fe8d862d00552ef0c5891f2f903900f69405b323"
+  },
+  {
+    "filename": "interpretability_deepshap.zip",
+    "bytes": 34024110,
+    "sha256": "d2d76342f3732352afc12475864914d862b9bcb6490ed06fd693f9b6a62f7ccb"
+  },
+  {
+    "filename": "manuscript_protocols_revised_controls.tex",
+    "bytes": 96928,
+    "sha256": "c485120a0359bec62dba1fabdb8986a7b96e35e5ca69fee0834251329badad30"
+  },
+  {
+    "filename": "tfmodisco_inputs_1362.zip",
+    "bytes": 63672859,
+    "sha256": "ff08d2b6f88074b3a66c7121930baf08afad78ff23c67936a2511ff9cdaea755"
+  },
+  {
+    "filename": "tfmodisco_results_1362.h5",
+    "bytes": 13773032,
+    "sha256": "8616013baf711ad0cc4a500c1c8d2c926494405e5915abec6b5f8d4162ab015b"
+  },
+  {
+    "filename": "筛选与leaf_expression相关的基因汇总版.xlsx",
+    "bytes": 4269121,
+    "sha256": "aad0427ec6f8609c7db55416ecc1a0933184789bef21b0ed8f357557062253ed"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "n_requested_core_genes":1362,
+  "n_available_in_model_data":1357,
+  "n_used_for_tfmodisco":1357,
+  "one_hot_shape":[
+    1357,
+    3020,
+    4
+  ],
+  "attribution_shape":[
+    1357,
+    3020,
+    4
+  ],
+  "mean_abs_attribution":0.0002308311,
+  "require_predicted_high":false,
+  "multiply_by_onehot":false
+}

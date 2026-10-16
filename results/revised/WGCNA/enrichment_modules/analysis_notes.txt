@@ -1,0 +1,9 @@
+Target: modules
+Mapping MD5: 6934f262e601784cf39fdc1f5b596bf0
+Retain all valid distinct one-to-many mapping pairs; enrichment units are unique Entrez IDs.
+Universe = unique mapped Entrez IDs of tested network genes; database further restricts to annotated genes.
+BH separately within BP, CC, MF and KEGG; report adjusted P < 0.05, not all_tested row count. BH-adjusted P differs from qvalue.
+minGSSize=10; maxGSSize=500.
+GeneRatio = target Count / analysis-specific recognized target denominator.
+BgRatio = term-specific background count / analysis-specific recognized background denominator.
+Mapping coverage and possible legacy row-limit truncation must be reported.

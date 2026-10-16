@@ -1,0 +1,6 @@
+﻿task,species,tissue,fold,val_chromosome,n_background,n_explained,n_val_total,n_val_used,n_val_pos_used,n_val_neg_used,only_correct_predictions,model_path
+Atha_leaf,Atha,leaf,1,1,64,256,765,256,129,127,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Atha_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr1.keras
+Atha_leaf,Atha,leaf,2,2,64,256,453,256,114,142,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Atha_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr2.keras
+Atha_leaf,Atha,leaf,3,3,64,256,477,256,122,134,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Atha_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr3.keras
+Atha_leaf,Atha,leaf,4,4,64,256,408,256,120,136,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Atha_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr4.keras
+Atha_leaf,Atha,leaf,5,5,64,256,582,256,142,114,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Atha_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr5.keras

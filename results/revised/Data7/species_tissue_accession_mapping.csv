@@ -1,0 +1,9 @@
+Species,Tissue,BioProject,SRA study,Biological condition / replicate annotation
+Arabidopsis thaliana,Leaf,PRJEB32665,ERP115370,14 rosette-leaf samples (distinct leaf positions and parts)
+Arabidopsis thaliana,Root,PRJNA271595,SRP051696,3 root zones x 3 biological replicates
+Solanum lycopersicum,Leaf,-,SRP010775,"2 runs, 1 BioSample / 1 experiment"
+Solanum lycopersicum,Root,PRJNA271595,SRP051696,3 root zones x 3 biological replicates
+Sorghum bicolor,Leaf,PRJEB22168,ERP024508,"14 runs, 3 BioSamples (5 + 5 + 4 runs)"
+Sorghum bicolor,Root,PRJNA217523,SRP029353,"5 runs, 1 BioSample (H2O control)"
+Zea mays,Leaf,PRJNA171684,SRP014652,6-24 DAP; pollinated vs non-pollinated; R1/R2
+Zea mays,Root,PRJNA271595,SRP051696,3 root zones x 3 biological replicates

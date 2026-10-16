@@ -1,0 +1,5 @@
+screening_column,corrected_GS_column,n_genes,max_abs_numeric_difference,Pearson_r
+cor.Standard,GS_leaf,27910,1.986937603960288,-0.9999999999999994
+cor.Standard,GS_root,27910,4.999530234250926e-10,0.9999999999999994
+cor.Weighted,GS_leaf,27910,1.934242103507673,-0.9928236970357042
+cor.Weighted,GS_root,27910,0.243337230860804,0.9928236970357042
