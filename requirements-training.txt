@@ -1,0 +1,18 @@
+# Dependency bounds for a compatible rerun environment; not a recovered historical lockfile.
+# Supplied checkpoint headers report Keras 2.10.0. Use Python 3.10 with compatible Keras 2.x.
+tensorflow>=2.10,<2.16
+numpy
+pandas
+scikit-learn
+scipy
+matplotlib
+seaborn
+pyranges
+pyfaidx
+biopython
+gffutils
+shap
+h5py
+joblib
+tqdm
+# Install the recorded modiscolite distribution/version separately for motif reruns.

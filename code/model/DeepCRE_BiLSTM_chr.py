@@ -47,13 +47,13 @@ warnings.filterwarnings("ignore")
 # =========================================================
 # 0. 全局配置
 # =========================================================
-DATA_DIR = "/home/data"
+DATA_DIR = os.environ.get("MCRE_DATA_DIR", "data/runtime")
 VALIDATION_PICKLE_CANDIDATES = [
     os.path.join(DATA_DIR, "validation_genes.pickle"),
     "/home/validation_genes.pickle",
     "/home/data/validation_genes.pickle",
 ]
-OUTPUT_ROOT = "/home/output_DeepCRE_BiLSTM_chr"
+OUTPUT_ROOT = os.environ.get("MCRE_MODEL_DIR", "outputs/DeepCRE_BiLSTM_chr")
 
 SEED = 42
 EPOCHS = 100

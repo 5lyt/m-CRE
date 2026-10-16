@@ -1,0 +1,143 @@
+{
+  "candidate_list_n": 1362,
+  "candidate_module_counts": {
+    "pink": 1359,
+    "floralwhite": 3
+  },
+  "candidate_abs_cor_gt_08_n": 1362,
+  "candidate_p_lt_0001_n": 1362,
+  "used_n": 1357,
+  "used_module_counts": {
+    "pink": 1354,
+    "floralwhite": 3
+  },
+  "used_true_high": 1357,
+  "used_pred_high": 1182,
+  "used_pred_high_percent": 87.1039056742815,
+  "metadata_model_chrom_matches_gene_chrom": true,
+  "original_M4_OOF_n": 2333,
+  "original_M4_OOF_auc": 0.9085920355816336,
+  "candidate_overlap_original_OOF_n": 165,
+  "candidate_OOF_high_pred_n": 142,
+  "candidate_replay_high_pred_in_OOF_overlap_n": 139,
+  "candidate_replay_original_OOF_max_prob_diff": 0.82051978,
+  "candidate_replay_original_OOF_mean_prob_diff": 0.046970943478787885,
+  "module_union_n": 8818,
+  "module_union_scored_n": 579,
+  "module_union_true_high": 571,
+  "module_union_pred_high": 392,
+  "module_union_true_and_pred_high": 390,
+  "spreadsheet_weighted_cor_max_error_against_Root": 0.243337230860804,
+  "spreadsheet_weighted_cor_max_error_against_Leaf": 1.934242103507673,
+  "sequence_arrays": {
+    "shape": [
+      1357,
+      3020,
+      4
+    ],
+    "negative_fraction": 0.4827529074165353,
+    "positive_fraction": 0.508637699053717,
+    "min": -0.05732600763440132,
+    "max": 0.037021175026893616,
+    "mean_abs": 0.00023083093401510268,
+    "masked_ohe_positions_verified": [
+      [
+        1000,
+        1003
+      ],
+      [
+        1500,
+        1520
+      ],
+      [
+        2017,
+        2020
+      ]
+    ],
+    "max_abs_attr_at_zero_input": 0.01927611418068409
+  },
+  "metadata_copies_equal": true,
+  "Figure3_sampling": [
+    {
+      "task": "Atha_leaf",
+      "n_folds": 5,
+      "n_explained_total": 1280,
+      "n_explained_min": 256,
+      "n_explained_max": 256,
+      "n_background_min": 64,
+      "n_background_max": 64,
+      "sequence_CV_median": 0.14001077865278225
+    },
+    {
+      "task": "Atha_root",
+      "n_folds": 5,
+      "n_explained_total": 1280,
+      "n_explained_min": 256,
+      "n_explained_max": 256,
+      "n_background_min": 64,
+      "n_background_max": 64,
+      "sequence_CV_median": 0.18551129813558853
+    },
+    {
+      "task": "Sbic_leaf",
+      "n_folds": 10,
+      "n_explained_total": 2520,
+      "n_explained_min": 216,
+      "n_explained_max": 256,
+      "n_background_min": 64,
+      "n_background_max": 64,
+      "sequence_CV_median": 0.4112068191893421
+    },
+    {
+      "task": "Sbic_root",
+      "n_folds": 10,
+      "n_explained_total": 2542,
+      "n_explained_min": 238,
+      "n_explained_max": 256,
+      "n_background_min": 64,
+      "n_background_max": 64,
+      "sequence_CV_median": 0.24604800161903465
+    },
+    {
+      "task": "Slyc_leaf",
+      "n_folds": 12,
+      "n_explained_total": 3072,
+      "n_explained_min": 256,
+      "n_explained_max": 256,
+      "n_background_min": 64,
+      "n_background_max": 64,
+      "sequence_CV_median": 0.20650327939588325
+    },
+    {
+      "task": "Slyc_root",
+      "n_folds": 12,
+      "n_explained_total": 3067,
+      "n_explained_min": 251,
+      "n_explained_max": 256,
+      "n_background_min": 64,
+      "n_background_max": 64,
+      "sequence_CV_median": 0.22430301413034942
+    },
+    {
+      "task": "Zmay_leaf",
+      "n_folds": 10,
+      "n_explained_total": 2127,
+      "n_explained_min": 138,
+      "n_explained_max": 256,
+      "n_background_min": 64,
+      "n_background_max": 64,
+      "sequence_CV_median": 0.37724360097810716
+    },
+    {
+      "task": "Zmay_root",
+      "n_folds": 10,
+      "n_explained_total": 2107,
+      "n_explained_min": 139,
+      "n_explained_max": 256,
+      "n_background_min": 64,
+      "n_background_max": 64,
+      "sequence_CV_median": 0.18394842807277728
+    }
+  ],
+  "screening_orientation_note": "cor.Standard matches corrected GS_Root to <5e-10. cor.Weighted is a separate weighted score; it is not numerically equal to raw GS_Root. Candidate selection uses its absolute magnitude."
+}

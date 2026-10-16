@@ -47,13 +47,13 @@ warnings.filterwarnings("ignore")
 # =========================================================
 # 0. 全局配置
 # =========================================================
-DATA_DIR = "/home/data"
+DATA_DIR = os.environ.get("MCRE_DATA_DIR", "data")
 VALIDATION_PICKLE_CANDIDATES = [
     os.path.join(DATA_DIR, "validation_genes.pickle"),
-    "/home/validation_genes.pickle",
-    "/home/data/validation_genes.pickle",
+    "/home/u104753230892/104753230892/validation_genes.pickle",
+    "/home/u104753230892/104753230892/data/validation_genes.pickle",
 ]
-OUTPUT_ROOT = "/home/output_DeepCRE_mRNA_BiLSTM_chr"
+OUTPUT_ROOT = os.environ.get("MCRE_MODEL_DIR", "output_DeepCRE_mRNA_BiLSTM_chr")
 
 SEED = 42
 EPOCHS = 100
@@ -618,7 +618,7 @@ def balance_train_data(train_seqs, train_mrna, train_labels):
     min_class = min(len(low_train), len(high_train))
 
     if min_class == 0:
-        return train_seqs, train_mrna, train_labels
+        return train_seqs, train_mrna, train_labels, np.arange(len(train_labels))
 
     selected_low = np.random.choice(low_train, min_class, replace=False)
     selected_high = np.random.choice(high_train, min_class, replace=False)
@@ -638,10 +638,11 @@ def balance_train_data(train_seqs, train_mrna, train_labels):
         np.take(train_labels, selected_high, axis=0),
     ], axis=0)
 
-    x_seq_balanced, x_mrna_balanced, y_balanced = shuffle(
-        x_seq_balanced, x_mrna_balanced, y_balanced, random_state=SEED
+    selected_indices = np.concatenate([selected_low, selected_high])
+    x_seq_balanced, x_mrna_balanced, y_balanced, selected_indices = shuffle(
+        x_seq_balanced, x_mrna_balanced, y_balanced, selected_indices, random_state=SEED
     )
-    return x_seq_balanced, x_mrna_balanced, y_balanced
+    return x_seq_balanced, x_mrna_balanced, y_balanced, selected_indices
 
 
 def build_model(seq_len: int, mrna_dim: int):
@@ -791,7 +792,7 @@ def run_single_task(task_name: str, base_df: pd.DataFrame) -> dict:
         y_train = y[train_idx]
         y_val = y[val_idx]
 
-        X_seq_train_bal, X_mrna_train_bal, y_train_bal = balance_train_data(
+        X_seq_train_bal, X_mrna_train_bal, y_train_bal, balanced_indices = balance_train_data(
             X_seq_train, X_mrna_train, y_train
         )
 
@@ -804,6 +805,17 @@ def run_single_task(task_name: str, base_df: pd.DataFrame) -> dict:
             scaler = StandardScaler()
             X_mrna_train_bal = scaler.fit_transform(X_mrna_train_bal).astype(np.float32)
             X_mrna_val = scaler.transform(X_mrna_val).astype(np.float32)
+            preprocessing_path = os.path.join(task_dir, f"preprocessing_chr{valid_chrom}.json")
+            with open(preprocessing_path, "w", encoding="utf-8") as stream:
+                json.dump({"feature_order": MRNA_COLS, "mean": scaler.mean_.tolist(),
+                           "scale": scaler.scale_.tolist(), "var": scaler.var_.tolist(),
+                           "n_samples_seen": int(scaler.n_samples_seen_), "fit_population": "balanced_training_only",
+                           "held_out_chromosome": str(valid_chrom), "fold": fold_round}, stream, indent=2)
+            train_df.iloc[balanced_indices][["gene_id", "label"]].to_csv(
+                os.path.join(task_dir, f"balanced_training_chr{valid_chrom}.csv"), index=False)
+            val_df[["gene_id", "label"]].to_csv(
+                os.path.join(task_dir, f"scored_genes_chr{valid_chrom}.csv"), index=False)
+
         else:
             X_mrna_train_bal = X_mrna_train_bal.astype(np.float32)
             X_mrna_val = X_mrna_val.astype(np.float32)

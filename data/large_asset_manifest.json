@@ -1,0 +1,22 @@
+[
+  {
+    "file": "models_01_05.zip",
+    "bytes": 30082479,
+    "sha256": "541abfa6523e400f8382e7166f1137c704c6d4d43d86ee9072922ebc78d9464b"
+  },
+  {
+    "file": "models_06_10.zip",
+    "bytes": 30055999,
+    "sha256": "f81d9be4ff412213b5dbb73bcc317c9ea28ed56c09f4a44d36b520a4d270ef2e"
+  },
+  {
+    "file": "motif_inputs_part1.zip",
+    "bytes": 31870374,
+    "sha256": "91bddc38d02d46856b2f5d070b43f1612fdbd1bc4bccc7637cf955752f245f77"
+  },
+  {
+    "file": "motif_inputs_part2.zip",
+    "bytes": 31810973,
+    "sha256": "b69af7a9853fa319aa0e2b3e9050173d5454b62ba20bc75c542e01e796eb7ac0"
+  }
+]

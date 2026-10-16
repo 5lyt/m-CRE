@@ -1,0 +1,13 @@
+﻿task,species,tissue,fold,val_chromosome,n_background,n_explained,n_val_total,n_val_used,n_val_pos_used,n_val_neg_used,only_correct_predictions,model_path
+Slyc_root,Slyc,root,1,1,64,256,459,256,119,137,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Slyc_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr1.keras
+Slyc_root,Slyc,root,2,2,64,256,399,256,110,146,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Slyc_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr2.keras
+Slyc_root,Slyc,root,3,3,64,256,352,256,111,145,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Slyc_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr3.keras
+Slyc_root,Slyc,root,4,4,64,256,322,256,111,145,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Slyc_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr4.keras
+Slyc_root,Slyc,root,5,5,64,256,308,256,90,166,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Slyc_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr5.keras
+Slyc_root,Slyc,root,6,6,64,256,279,256,107,149,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Slyc_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr6.keras
+Slyc_root,Slyc,root,7,7,64,256,312,256,103,153,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Slyc_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr7.keras
+Slyc_root,Slyc,root,8,8,64,256,276,256,125,131,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Slyc_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr8.keras
+Slyc_root,Slyc,root,9,9,64,256,282,256,94,162,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Slyc_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr9.keras
+Slyc_root,Slyc,root,10,10,64,256,274,256,88,168,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Slyc_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr10.keras
+Slyc_root,Slyc,root,11,11,64,251,251,251,96,155,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Slyc_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr11.keras
+Slyc_root,Slyc,root,12,12,64,256,270,256,87,169,False,/home/u104753230892/104753230892/output_DeepCRE_mRNA_BiLSTM_chr/Slyc_root/output_DeepCRE_mRNA_BiLSTM_chr_model_chr12.keras

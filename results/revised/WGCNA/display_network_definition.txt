@@ -1,0 +1,7 @@
+TOM entries computed with ALL original network genes as common-neighbor universe.
+Unsigned Pearson adjacency, saved power, min denominator; diagonal adjacency removed.
+Display selection by original-module kWithin if target >1000; at most500 in that case.
+Undirected edges: strictly above 95th percentile of off-diagonal upper triangle, positive weights only.
+Nodes include isolated display nodes; connected count reported separately.
+Hub degree is degree in this thresholded display graph, NOT original full-network degree.
+Display counts are recorded in display_network_actual_counts.csv.

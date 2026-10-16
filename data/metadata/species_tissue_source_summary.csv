@@ -1,0 +1,10 @@
+Species,Tissue,Source table (Ref. 11),Number of replicate runs
+Arabidopsis thaliana,Leaf,S.data-1a,14
+Arabidopsis thaliana,Root,S.data-1b,9
+Solanum lycopersicum,Leaf,S.data-1c,2
+Solanum lycopersicum,Root,S.data-1d,9
+Sorghum bicolor,Leaf,S.data-1e,14
+Sorghum bicolor,Root,S.data-1f,5
+Zea mays,Leaf,S.data-1g,14
+Zea mays,Root,S.data-1h,9
+Total,,,76

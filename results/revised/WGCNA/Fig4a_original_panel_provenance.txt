@@ -1,0 +1,3 @@
+Source figure: Fig4a_original_two_strips.png
+Panel a retains the original plot with initial and merged module-color strips.
+The separately exported single-strip PDF represents the final-label plot.

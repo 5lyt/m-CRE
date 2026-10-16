@@ -1,44 +1,50 @@
 # m-CRE
 
-m-CRE is a deep learning framework for high/low plant gene expression classification by integrating regulatory sequence information and mRNA half-life-related features. The framework combines TSS- and TTS-flanking sequence inputs with transcript-structure-derived features and supports ablation analysis, chromosome-wise validation, and DeepSHAP-based model interpretation.
+m-CRE classifies plant genes as relatively high or low expressed within a species and tissue, using paired gene-boundary DNA windows and eight transcript structural and compositional features. It also provides attribution and co-expression analyses for prioritizing candidate regulatory motifs.
 
-## Overview
+## Installation and quick checks
 
-This repository contains the source code used for:
+Run commands from the repository root:
 
-- extracting TSS- and TTS-flanking regulatory sequences;
-- calculating mRNA half-life-related features;
-- constructing high/low gene expression labels;
-- training sequence-only, feature-only, and fused deep learning models;
-- performing chromosome-wise validation;
-- conducting DeepSHAP-based interpretability analysis;
-- generating partial figures and result summaries for publication.
+```bash
+python -m pip install -r requirements-audit.txt
+python analysis/verify_revision.py --output outputs/verified_core.json
+python analysis/verify_new_materials.py --output-dir outputs/verified_new
+python code/motifs/export_patterns_meme.py --h5 data/motifs/tfmodisco_results_1362.h5 --output outputs/patterns.meme
+```
 
-## Species and tissues
+These checks inspect supplied CSV/HDF5 records and require no GPU or model retraining. Training dependencies are listed in requirements-training.txt.
 
-The model was evaluated on leaf and root datasets from four representative plant species:
+## Code and data
 
-- *Arabidopsis thaliana*;
-- *Solanum lycopersicum*;
-- *Sorghum bicolor*;
-- *Zea mays*.
+| Component | Location |
+| --- | --- |
+| M1-M4 models and model comparisons | code/model/ |
+| Expected-gradients attribution | code/interpretation/attribute_expected_gradients.py |
+| Feature calculation and input preparation | code/data_deal/ and code/reproducibility/ |
+| TF-MoDISco, MEME export and TOMTOM | code/motifs/ |
+| WGCNA and enrichment | R/ and results/revised/WGCNA/ |
+| Complete common feature inputs | data/processed/; 27,652 Atha, 34,081 Sbic, 34,413 Slyc and 39,745 Zmay genes |
+| Ten-model performance tables | data/model_metrics/ten_model_controls/ |
+| Candidate inputs and source metadata | data/candidates/ and data/metadata/ |
+| Stored TF-MoDISco patterns | data/motifs/tfmodisco_results_1362.h5 |
+| Supporting results and data definitions | results/revised/ |
 
-## Repository structure
+The original source versions are retained under provenance/original_code/. The maize feature reconstruction utility imports the original extractor from that directory.
 
-```text
-m-CRE/
-├── code/
-│   ├── data_deal/          # Data preprocessing scripts
-│   ├── model/              # Model training and validation scripts
-│   └── interpretation/     # DeepSHAP and visualization scripts
-│
-├── data/
-│   ├── example/            # Representative processed example data
-│   └── metadata/           # Metadata files, accession lists, and validation information
-│
-├── results/                # Selected result tables and figures
-├── R/                      # WGCNA-related scripts and auxiliary analyses
-├── README.md
-├── requirements.txt
-├── .gitignore
-└── LICENSE
+## Analysis definitions
+
+- The requested motif cohort contains 1,362 genes; 1,357 have aligned complete inputs. Legacy filenames ending in 1362 retain their original names.
+- Candidate replay yields 1,182 high and 175 low predictions. Its 165-gene overlap with the original maize-leaf OOF export contains 142 originally predicted-high genes; these records and denominators are reported separately.
+- Attribution uses SHAP GradientExplainer expected gradients. Sequence channels follow A/C/G/T; the corrected channel summary is supplied with the results.
+- The HDF5 contains 13 positive and 15 negative patterns, with 2,576 retained seqlets from 348 genes. The stored seqlet support is distinct from the full 1,357-gene input cohort.
+- Figure 2a/d uses mean chromosome-fold AUROC and sample SD. Figure 2c/f uses AUROC over concatenated source-model prediction records. These summaries are distinct from original training OOF AUROC.
+- Common feature tables contain preprocessed modeling values. Fold scaling is fitted on balanced training genes. Raw reconstructed features must not silently replace the common inputs.
+
+## Documentation and availability
+
+See [Reproduction instructions](docs/REPRODUCIBILITY.md) for commands, required inputs and validation scope, [Data inventory](docs/DATA.md) for assets and data definitions, and [Changes since v1.0.0](docs/RELEASE_NOTES.md) for software changes.
+
+Versioned software is listed on the [GitHub releases page](https://github.com/5lyt/m-CRE/releases). The baseline v1.0.0 archive is identified by [DOI 10.5281/zenodo.20505253](https://doi.org/10.5281/zenodo.20505253); version-specific archival identifiers belong to their corresponding releases. Large model/input asset names and checksums are listed in data/large_asset_manifest.json.
+
+The Academic Research License is provided in LICENSE.
