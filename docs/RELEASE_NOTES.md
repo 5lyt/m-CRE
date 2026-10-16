@@ -1,13 +1,11 @@
-# Release notes for m-CRE v1.1.0
+# Changes since v1.0.0
 
-Prepared revision of the existing v1.0.0 repository for the Scientific Reports manuscript. Publish this note only with the actual new tag.
+- Add complete common eight-feature input tables for four species and the TF-MoDISco HDF5 result object.
+- Add ten-model comparison summaries, candidate/OOF comparisons, source metadata and retained-seqlet membership tables.
+- Correct attribution method naming to expected gradients and nucleotide-channel labels to A/C/G/T.
+- Save training scaler and cohort state; export signed auxiliary-feature attribution before magnitude aggregation.
+- Add model-comparison, control-feature, WGCNA/enrichment and motif-analysis entry points with reproduction commands.
+- Document chromosome-fold, pooled OOF and cross-species prediction summaries separately.
+- Distinguish 1,362 requested candidates, 1,357 complete inputs and the 348 genes represented by 2,576 retained seqlets.
 
-- Preserve original M1–M4 source, example data, WGCNA objects, results and Academic Research License; consolidate revised entry points in one source tree.
-- Add all four full common eight-feature input tables and the TF-MoDISco HDF5 object.
-- Correct expected-gradients method naming and ACGT nucleotide-channel export; save signed auxiliary outputs before magnitude aggregation.
-- Save training scaler and cohort state and provide strict saved-state attribution replay.
-- Add candidate/OOF audits, exact seqlet interval checks, explicit cross-species AUROC aggregation and sample metadata.
-- Add complete comparison rerun, control feature builders, WGCNA/enrichment replay, motif/MEME/TOMTOM entry points and commands.
-- Distinguish 1,362 requested candidates, 1,357 actual inputs and 348 genes supporting the retained 2,576 seqlets.
-
-This preparation does not retrain historical models or certify unrecorded preprocessing, family-wise partitions or the exact original motif database. Existing separate model/array assets are reused unchanged.
+New rerun programs are distinct from the historical runs that produced the supplied results. Historical model checkpoints and motif-input arrays retain their original numerical contents. See REPRODUCIBILITY.md for the scope of validation and requirements for exact checkpoint replay.

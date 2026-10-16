@@ -1,6 +1,6 @@
 # Reproduction instructions
 
-Run commands from the repository root. `requirements-audit.txt` is sufficient for CSV/HDF5 verification. Training dependencies are listed separately; the original exact environment has not been recovered. The supplied checkpoint headers report Keras 2.10.0 with the TensorFlow backend, and the .keras-named files are HDF5. Use a compatible Python 3.10/Keras 2.x environment for checkpoint work; the header alone does not establish every package version.
+Run commands from the repository root. `requirements-audit.txt` is sufficient for CSV/HDF5 verification. Training dependencies are listed separately as compatibility bounds rather than an exact historical environment lockfile. The supplied checkpoint headers report Keras 2.10.0 with the TensorFlow backend, and the .keras-named files are HDF5. Use a compatible Python 3.10/Keras 2.x environment for checkpoint work; the header alone does not establish every package version.
 
 ## Inspect existing results
 
@@ -58,7 +58,7 @@ python code/model/train_comparisons.py --prepared prepared/Zmay_leaf.npz --model
 python code/model/train_comparisons.py --prepared prepared/Zmay_leaf.npz --model M4-T8 --control-features prepared/Zmay_transcript8.csv --output-dir outputs/new_M4T8_Zmay_leaf
 ```
 
-The same command accepts M1, M2, M3, M4, M4-R8, M4-P, T8-only and R8-only. Control models require the corresponding eight-column CSV. Each control table must cover the prepared gene cohort; missing rows cause an error. New runs save configuration, folds, balanced IDs, scalers and raw OOF probabilities, enabling a real subsequent gene-paired audit. Their balance random stream is explicitly seeded per fold; they are not silently labeled as the original trained models.
+The same command accepts M1, M2, M3, M4, M4-R8, M4-P, T8-only and R8-only. Control models require the corresponding eight-column CSV. Each control table must cover the prepared gene cohort; missing rows cause an error. New runs save configuration, folds, balanced IDs, scalers and raw OOF probabilities, enabling subsequent gene-paired comparisons. The balance random stream is explicitly seeded per fold; outputs identify these runs separately from the historical model records.
 
 ## Raw maize descriptors
 
@@ -76,7 +76,7 @@ python code/motifs/run_tfmodisco_lite.py --input-dir /path/to/restored_inputs --
 python code/motifs/run_tomtom.py --query outputs/patterns.meme --database /path/to/actual_plant_profiles.meme --output-dir outputs/new_tomtom
 ```
 
-The original builder scripts remain under code/motifs/ for provenance and prepared-input generation. They reconstruct preprocessing and must not be advertised as exact historical checkpoint replay. The TF-MoDISco wrapper retains the supplied direct score-as-hypothetical-contribution convention. The TOMTOM wrapper records its explicit new command, version and database checksum. The historical JASPAR release is not guessed: the supplied shell example named 2022 while the earlier paper said 2024. Original database/command logs remain needed to reproduce the exact historical annotation run. MEME export here uses stored sequence PFMs with an explicit pseudocount; it is a documented new export, not a claim to recover an unprovided old query file.
+The original builder scripts remain under code/motifs/ for provenance and prepared-input generation. They reconstruct preprocessing rather than restoring unprovided historical checkpoint state. The TF-MoDISco wrapper retains the supplied direct score-as-hypothetical-contribution convention. The TOMTOM wrapper records its explicit new command, version and database checksum. The historical plant-profile database release is not assigned because its exact file/checksum and command log are unavailable. Those records are required for exact historical annotation replay. MEME export here uses stored sequence PFMs with an explicit pseudocount; it is a documented new export, not a claim to recover an unprovided old query file.
 
 ## WGCNA and enrichment
 
@@ -88,8 +88,12 @@ Rscript R/enrichment_from_saved_mapping.R .
 Rscript R/enrichment_from_saved_mapping.R . --rerun
 ```
 
-The network replay reads the actual 23-by-27,910 expression object, fixed corrected module assignments and original-module connectivity ranking. It recomputes indicator associations and full-neighbor TOM for the 500 selected genes without allocating the whole square matrix. It does not reselect modules. The enrichment default reads the supplied frozen exports; --rerun needs clusterProfiler and org.Zmays.eg.db and makes a new annotation query, recording the date and environment. A new query can differ as annotation databases change. These R entry points were reviewed as source but not executed here because this environment has no R runtime.
+The network replay reads the actual 23-by-27,910 expression object, fixed corrected module assignments and original-module connectivity ranking. It recomputes indicator associations and full-neighbor TOM for the 500 selected genes without allocating the whole square matrix. It does not reselect modules. The enrichment default reads the supplied frozen exports; --rerun needs clusterProfiler and org.Zmays.eg.db and makes a new annotation query, recording the date and environment. A new query can differ as annotation databases change. Validation coverage is specified below.
 
-## Records still required for specific claims
+## Scope and additional inputs
 
-Exact original checkpoint replay needs original scalers and balanced/background gene identities. Feature-value direction and fold-wise directional consistency need signed eight-feature per-gene attributions, not only the signed motif sequence arrays. A verified family-wise benchmark needs actual group/fold assignments, homolog mappings and gene-level M1/M4 predictions. Root high-class overlap needs the original root label file. Historical control provenance needs the original training manifests; new portable reruns are separately labeled. The revised manuscript does not claim that these specific missing records have been reconstructed.
+Exact original checkpoint replay needs original scalers and balanced/background gene identities. Feature-value direction and fold-wise directional consistency need signed eight-feature per-gene attributions, not only the signed motif sequence arrays. A verified family-wise benchmark needs actual group/fold assignments, homolog mappings and gene-level M1/M4 predictions. Root high-class overlap needs the original root label file. Historical control provenance needs the original training manifests; new portable reruns are separately labeled. These records are not reconstructed by the supplied rerun utilities.
+
+## Package validation
+
+Package validation covered Python syntax, supplied CSV/HDF5 consistency, candidate-feature agreement, retained-seqlet interval agreement, synthetic raw/control-feature boundary examples and MEME export. End-to-end model training, R analyses, TF-MoDISco discovery and TOMTOM annotation queries were not executed during this package validation. The historical stored results and the validation of new entry points are separate records.

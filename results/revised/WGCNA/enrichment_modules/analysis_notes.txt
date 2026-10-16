@@ -6,4 +6,4 @@ BH separately within BP, CC, MF and KEGG; report adjusted P < 0.05, not all_test
 minGSSize=10; maxGSSize=500.
 GeneRatio = target Count / analysis-specific recognized target denominator.
 BgRatio = term-specific background count / analysis-specific recognized background denominator.
-Mapping coverage and possible legacy row-limit truncation must be reported.
+Mapping coverage is recorded in mapping_counts.csv; analysis-specific recognized denominators are recorded in enrichment_effective_counts.csv.

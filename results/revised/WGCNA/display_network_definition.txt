@@ -4,4 +4,4 @@ Display selection by original-module kWithin if target >1000; at most500 in that
 Undirected edges: strictly above 95th percentile of off-diagonal upper triangle, positive weights only.
 Nodes include isolated display nodes; connected count reported separately.
 Hub degree is degree in this thresholded display graph, NOT original full-network degree.
-Never force old 313 nodes/6238 edges/32 hubs; report actual corrected counts.
+Display counts are recorded in display_network_actual_counts.csv.

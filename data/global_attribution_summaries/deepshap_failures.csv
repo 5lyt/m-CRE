@@ -1,9 +1,0 @@
-﻿species,task,error
-Atha,Atha_leaf,"AttributeError(""Rectangle.set() got an unexpected keyword argument 'legend'"")"
-Atha,Atha_root,"AttributeError(""Rectangle.set() got an unexpected keyword argument 'legend'"")"
-Sbic,Sbic_leaf,"AttributeError(""Rectangle.set() got an unexpected keyword argument 'legend'"")"
-Sbic,Sbic_root,"AttributeError(""Rectangle.set() got an unexpected keyword argument 'legend'"")"
-Slyc,Slyc_leaf,"AttributeError(""Rectangle.set() got an unexpected keyword argument 'legend'"")"
-Slyc,Slyc_root,"AttributeError(""Rectangle.set() got an unexpected keyword argument 'legend'"")"
-Zmay,Zmay_leaf,"AttributeError(""Rectangle.set() got an unexpected keyword argument 'legend'"")"
-Zmay,Zmay_root,"AttributeError(""Rectangle.set() got an unexpected keyword argument 'legend'"")"

@@ -1,6 +1,6 @@
 # Supplementary Data 7
 
-This dataset records model inputs, attribution summaries and candidate/pattern provenance used in the revised manuscript.
+This dataset records model inputs, attribution summaries and candidate/pattern provenance used in the accompanying study.
 
 - The four `*_mRNA_features_common.csv` files contain the complete supplied numerical inputs with one gene ID and eight ordered features. `full_feature_input_audit.csv` reports the four species, row counts and column summaries; all 1,357 candidate feature vectors match the full maize table exactly.
 - `sample_manifest_76_runs.csv`, `species_tissue_accession_mapping.csv` and `species_tissue_source_summary.csv` preserve the supplied source-study/sample mappings. The maize network uses the 23-run subset described in Methods.

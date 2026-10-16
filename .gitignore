@@ -12,3 +12,6 @@ verified_*/
 *.npz
 *.zip
 # Supplied data/motifs/tfmodisco_results_1362.h5 is a tracked result object.
+# Generated debugging reports
+**/deepshap_failures.csv
+**/output_DeepCRE_mRNA_BiLSTM_chr_run_failures.csv
