@@ -1,0 +1,420 @@
+{
+  "base_main_commit": "8e4b25fa6f083e5b7e452b95e2be012f1f439c06",
+  "M4_models": [
+    {
+      "chromosome": 1,
+      "path": "Zmay_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr1.keras",
+      "bytes": 6587440,
+      "sha256": "056ebe85f59998818e38f5aaa7f97f99b62068313c0d6b6ef9ba69a4efaa6085",
+      "keras_header_version": "2.10.0",
+      "input_shapes": [
+        [
+          null,
+          3020,
+          4
+        ],
+        [
+          null,
+          8
+        ]
+      ],
+      "matches_previous_M4_upload": true
+    },
+    {
+      "chromosome": 2,
+      "path": "Zmay_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr2.keras",
+      "bytes": 6587440,
+      "sha256": "5e131e8a3cedaf9ed354780c2606cc7dfb93674fb31a66d4cb7650ae23be1170",
+      "keras_header_version": "2.10.0",
+      "input_shapes": [
+        [
+          null,
+          3020,
+          4
+        ],
+        [
+          null,
+          8
+        ]
+      ],
+      "matches_previous_M4_upload": true
+    },
+    {
+      "chromosome": 3,
+      "path": "Zmay_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr3.keras",
+      "bytes": 6587440,
+      "sha256": "c2a14c71bc90a4337c4fb630c33978ca2ea3977c2b452f3a88cdf28f167ff7c1",
+      "keras_header_version": "2.10.0",
+      "input_shapes": [
+        [
+          null,
+          3020,
+          4
+        ],
+        [
+          null,
+          8
+        ]
+      ],
+      "matches_previous_M4_upload": true
+    },
+    {
+      "chromosome": 4,
+      "path": "Zmay_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr4.keras",
+      "bytes": 6587440,
+      "sha256": "902aedd5badc03a43d116a2977445b7a63f16822d09485f0aadc007f681c3f4f",
+      "keras_header_version": "2.10.0",
+      "input_shapes": [
+        [
+          null,
+          3020,
+          4
+        ],
+        [
+          null,
+          8
+        ]
+      ],
+      "matches_previous_M4_upload": true
+    },
+    {
+      "chromosome": 5,
+      "path": "Zmay_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr5.keras",
+      "bytes": 6587440,
+      "sha256": "c0739ef858b0270bf1d71a480f5c17f9e605c1803ea7e1e39aee62b360acc528",
+      "keras_header_version": "2.10.0",
+      "input_shapes": [
+        [
+          null,
+          3020,
+          4
+        ],
+        [
+          null,
+          8
+        ]
+      ],
+      "matches_previous_M4_upload": true
+    },
+    {
+      "chromosome": 6,
+      "path": "Zmay_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr6.keras",
+      "bytes": 6587440,
+      "sha256": "0c242726188d659276ed0eac26f7df80a4e240b203f5af49a60ae5f1c4393cde",
+      "keras_header_version": "2.10.0",
+      "input_shapes": [
+        [
+          null,
+          3020,
+          4
+        ],
+        [
+          null,
+          8
+        ]
+      ],
+      "matches_previous_M4_upload": true
+    },
+    {
+      "chromosome": 7,
+      "path": "Zmay_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr7.keras",
+      "bytes": 6587440,
+      "sha256": "dd41ba108da95897ef440e0400b40f132c449a66666185c263ba2b59d605fc71",
+      "keras_header_version": "2.10.0",
+      "input_shapes": [
+        [
+          null,
+          3020,
+          4
+        ],
+        [
+          null,
+          8
+        ]
+      ],
+      "matches_previous_M4_upload": true
+    },
+    {
+      "chromosome": 8,
+      "path": "Zmay_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr8.keras",
+      "bytes": 6587440,
+      "sha256": "adf3a5d36a0d4ef58bf1982635b82714fa58e573c26a1660a278ee14875c46f7",
+      "keras_header_version": "2.10.0",
+      "input_shapes": [
+        [
+          null,
+          3020,
+          4
+        ],
+        [
+          null,
+          8
+        ]
+      ],
+      "matches_previous_M4_upload": true
+    },
+    {
+      "chromosome": 9,
+      "path": "Zmay_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr9.keras",
+      "bytes": 6587440,
+      "sha256": "25758e9eb31cbb49a2580d61fa5fc402190d4f5a07161562d69f18f71977d917",
+      "keras_header_version": "2.10.0",
+      "input_shapes": [
+        [
+          null,
+          3020,
+          4
+        ],
+        [
+          null,
+          8
+        ]
+      ],
+      "matches_previous_M4_upload": true
+    },
+    {
+      "chromosome": 10,
+      "path": "Zmay_leaf/output_DeepCRE_mRNA_BiLSTM_chr_model_chr10.keras",
+      "bytes": 6587440,
+      "sha256": "0977850882c7add3dbaaec16ace785aeb585c53393297f261b63e56ceeb4467f",
+      "keras_header_version": "2.10.0",
+      "input_shapes": [
+        [
+          null,
+          3020,
+          4
+        ],
+        [
+          null,
+          8
+        ]
+      ],
+      "matches_previous_M4_upload": true
+    }
+  ],
+  "motif_inputs": {
+    "requested_candidates": 1362,
+    "complete_rows": 1357,
+    "shape": [
+      1357,
+      3020,
+      4
+    ],
+    "dtype": "float32",
+    "split_rows": [
+      679,
+      678
+    ],
+    "numeric_sha256": {
+      "sequences": "476d8bc1dbb890d2922f9032eccca06db74306c212b0e005736203d4d9654b51",
+      "attributions": "7b2b5fd0d4376fc5653db823dfcfe0d3856a73c14e18bca1e52f8ad6fcd3f6f2"
+    },
+    "restore_exact_values": true,
+    "all_2576_stored_seqlets_match": true
+  },
+  "control_summary_matches": [
+    {
+      "task": "Atha_leaf",
+      "model": "M4-R8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Atha_root",
+      "model": "M4-R8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Sbic_leaf",
+      "model": "M4-R8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Sbic_root",
+      "model": "M4-R8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Slyc_leaf",
+      "model": "M4-R8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Slyc_root",
+      "model": "M4-R8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Zmay_leaf",
+      "model": "M4-R8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Zmay_root",
+      "model": "M4-R8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Atha_leaf",
+      "model": "R8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Atha_root",
+      "model": "R8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Sbic_leaf",
+      "model": "R8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Sbic_root",
+      "model": "R8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Slyc_leaf",
+      "model": "R8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Slyc_root",
+      "model": "R8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Zmay_leaf",
+      "model": "R8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Zmay_root",
+      "model": "R8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Atha_leaf",
+      "model": "M4-P",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Atha_root",
+      "model": "M4-P",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Sbic_leaf",
+      "model": "M4-P",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Sbic_root",
+      "model": "M4-P",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Slyc_leaf",
+      "model": "M4-P",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Slyc_root",
+      "model": "M4-P",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Zmay_leaf",
+      "model": "M4-P",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Zmay_root",
+      "model": "M4-P",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Atha_leaf",
+      "model": "T8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Atha_root",
+      "model": "T8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Sbic_leaf",
+      "model": "T8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Sbic_root",
+      "model": "T8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Slyc_leaf",
+      "model": "T8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Slyc_root",
+      "model": "T8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Zmay_leaf",
+      "model": "T8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Zmay_root",
+      "model": "T8-only",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Atha_leaf",
+      "model": "M4-T8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Atha_root",
+      "model": "M4-T8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Sbic_leaf",
+      "model": "M4-T8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Sbic_root",
+      "model": "M4-T8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Slyc_leaf",
+      "model": "M4-T8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Slyc_root",
+      "model": "M4-T8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Zmay_leaf",
+      "model": "M4-T8",
+      "pooled_and_mean_match": true
+    },
+    {
+      "task": "Zmay_root",
+      "model": "M4-T8",
+      "pooled_and_mean_match": true
+    }
+  ],
+  "M0_state_is_not_M4_state": true,
+  "retraining_or_tensorflow_inference_run": false,
+  "repacked_zip_sha256_must_replace_previous_manifest": true
+}

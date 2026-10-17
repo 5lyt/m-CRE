@@ -28,3 +28,7 @@ Exact asset names, sizes and SHA256 checksums are listed in data/large_asset_man
 Reference genomes, annotations and raw SRA reads are public-source inputs; species configuration specifies reference filename patterns. Full training additionally requires complete processed expression-label tables and the validation whitelist. Example labels in this repository are partial examples. Exact checkpoint replay requires the preprocessing and cohort states described in REPRODUCIBILITY.md.
 
 KEGG query dates and annotation versions are recorded with the enrichment results. Gene-ID mappings, effective backgrounds and software session records are retained for interpretation and reproducibility. SOURCE_FILES_SHA256.tsv identifies files in this source tree; large-asset checksums are maintained separately.
+
+## Additional checkpoint and training provenance assets
+
+Three additional ZIPs provide supplied M0 maize-leaf models and training state, M1-M3 maize-leaf checkpoints/metrics, and historical control-training records. See RELEASE_ASSETS.md for exact filenames, historical model-name mappings, coverage and restoration paths. Their checksums are in data/supplementary_asset_manifest.json. The M0/control states are model-specific and must not be substituted for the missing original M4 preprocessing state.
