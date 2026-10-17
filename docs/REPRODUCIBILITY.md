@@ -44,7 +44,7 @@ The updated M4 trainer saves scaler state plus actual balanced/scored gene manif
 python code/interpretation/attribute_expected_gradients.py
 ```
 
-It saves signed auxiliary-feature attributions, matched gene IDs and feature values before taking absolute values. Supplied historical checkpoints lack these external scaler/sampling records; fitting a new scaler is a replay, not exact restoration of original predictions.
+It saves signed auxiliary-feature attributions, matched gene IDs and feature values before taking absolute values. The supplied historical M4 checkpoints lack linked external scaler/sampling records; fitting a new scaler is a replay rather than exact restoration of original predictions. Additional M0 and control records are now supplied separately; their state must not be substituted for M4 state. See RELEASE_ASSETS.md.
 
 ## Ten-comparison portable rerun
 
@@ -92,7 +92,7 @@ The network replay reads the actual 23-by-27,910 expression object, fixed correc
 
 ## Scope and additional inputs
 
-Exact original checkpoint replay needs original scalers and balanced/background gene identities. Feature-value direction and fold-wise directional consistency need signed eight-feature per-gene attributions, not only the signed motif sequence arrays. A verified family-wise benchmark needs actual group/fold assignments, homolog mappings and gene-level M1/M4 predictions. Root high-class overlap needs the original root label file. Historical control provenance needs the original training manifests; new portable reruns are separately labeled. These records are not reconstructed by the supplied rerun utilities.
+Exact original checkpoint replay needs original scalers and balanced/background gene identities. Feature-value direction and fold-wise directional consistency need signed eight-feature per-gene attributions, not only the signed motif sequence arrays. A verified family-wise benchmark needs actual group/fold assignments, homolog mappings and gene-level M1/M4 predictions. Root high-class overlap needs the original root label file. Additional historical control cohort/scaler-parameter/prediction records are supplied in control_training_records.zip, with model/task coverage and naming documented in RELEASE_ASSETS.md. New portable reruns remain separately labeled. These records are not reconstructed by the supplied rerun utilities.
 
 ## Package validation
 

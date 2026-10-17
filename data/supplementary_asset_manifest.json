@@ -1,0 +1,17 @@
+[
+  {
+    "file": "M0_Zmay_leaf_training_records.zip",
+    "bytes": 4818280,
+    "sha256": "67a22e96198cbc0c3b8e84784325268d060f8c1d5a4c07236213a80523d4d362"
+  },
+  {
+    "file": "M1_M2_M3_Zmay_leaf_checkpoints.zip",
+    "bytes": 147930712,
+    "sha256": "0d21b6733dbbd0cc156d64477b0b16074326b02e4c18286f14badb80e132e76e"
+  },
+  {
+    "file": "control_training_records.zip",
+    "bytes": 90576413,
+    "sha256": "b02e9e2785727f153c99f52d6ae81bf8f72be30ffc9b7467c183650ea1f706e3"
+  }
+]

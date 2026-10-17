@@ -48,3 +48,5 @@ See [Reproduction instructions](docs/REPRODUCIBILITY.md) for commands, required 
 Versioned software is listed on the [GitHub releases page](https://github.com/5lyt/m-CRE/releases). The baseline v1.0.0 archive is identified by [DOI 10.5281/zenodo.20505253](https://doi.org/10.5281/zenodo.20505253); version-specific archival identifiers belong to their corresponding releases. Large model/input asset names and checksums are listed in data/large_asset_manifest.json.
 
 The Academic Research License is provided in LICENSE.
+
+Separate model/input ZIP assets and additional M0/M1-M3/control records are documented in [Release assets](docs/RELEASE_ASSETS.md). The core and supplementary asset manifests identify the exact ZIP bytes. M0/control preprocessing states remain distinct from the original M4 state.
